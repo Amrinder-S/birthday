@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+		/*267 x 410*/
+        .text{
+            
+            padding: 20px;
+            max-width: 267px;
+            margin: 10px auto;
+            background-color: rgb(244, 231, 157);
+            backdrop-filter: blur(15px);
+            border-radius: inherit;
+            
+        }
+        img{
+            max-width: 250px;
+            padding: auto;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            transform: scale(2.1);
+        }
+        img:hover{
+            transform: scale(2.2);
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 267px;
+			min-height: 410px;
+            margin: 0 auto;
+            background-color: #fff9b4;
+            border-radius: 8px;
+            
+        }
+		.bdy-boy {
+		font-weight:bold;
+		color:#0004f7;
+		background-image:url('./sparkle-purple.gif')
+		}
+		.bdy-girl {
+		font-weight:bold;
+		color:#f700f3;
+		background-image:url('./sparkle-purple.gif')
+		}
+    </style>
+</head>
+<body>
+<script src="
+https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/index.min.js
+"></script>
+    <div class="card">
+        <div class="text">
+            <img src="./hb.png" alt="Happy Birthday">
+        </div>
+    </div>
+	<script>
+    fetch('https://raw.githubusercontent.com/Amrinder-S/GitHub_Test/master/data.json')
+        .then(response => response.json())
+        .then(data => {
+            const cardDiv = document.querySelector('.card');
+            data.forEach(person => {
+                const genderClass = person.gender === 'm' ? 'bdy-boy' : 'bdy-girl';
+                const pElement = document.createElement('p');
+                pElement.className = genderClass;
+                pElement.textContent = `${person.name} | CRN: ${person.CRN}`;
+                cardDiv.appendChild(pElement);
+            });
+        })
+        .catch(error => console.error(error));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Emily Johnson",
+        "CRN": "987654",
+        "gender": "f"
+    },
+    {
+        "name": "Michael Brown",
+        "CRN": "456789",
+        "gender": "m"
+    },
+    {
+        "name": "Olivia Martinez",
+        "CRN": "777888",
+        "gender": "f"
+    },
+    {
+        "name": "William Thomas",
+        "CRN": "666777",
+        "gender": "m"
+    },
+    {
+        "name": "Henry Hall",
+        "CRN": "123789",
+        "gender": "m"
+    },
+    {
+        "name": "Liam King",
+        "CRN": "999111",
+        "gender": "m"
+    },
+    {
+        "name": "Harper Moore",
+        "CRN": "555111",
+        "gender": "f"
+    },
+    {
+        "name": "Alexander Perez",
+        "CRN": "888111",
+        "gender": "m"
+    },
+    {
+        "name": "Avery Martin",
+        "CRN": "333111",
+        "gender": "f"
+    }
+]
