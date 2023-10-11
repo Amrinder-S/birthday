@@ -1,12 +1,12 @@
 [
     {
-        "name": "Jane Smith",
-        "CRN": "987654321",
-        "gender": "Female"
+        "name": "Maninderjeet Singh",
+        "CRN": "123456789",
+        "gender": "m"
     },
     {
-        "name": "Michael Johnson",
-        "CRN": "456789012",
-        "gender": "Male"
+        "name": "Brahmjot Kaur",
+        "CRN": "987654321",
+        "gender": "f"
     }
 ]
