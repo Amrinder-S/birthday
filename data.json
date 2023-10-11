@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "name": "Jane Smith",
+        "CRN": "987654321",
+        "gender": "Female"
+    },
+    {
+        "name": "Michael Johnson",
+        "CRN": "456789012",
+        "gender": "Male"
+    }
+]
