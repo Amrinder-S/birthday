@@ -2,7 +2,7 @@ import csv
 import json
 from datetime import datetime
 import os
-os.system("del data.json")
+os.system("rm data.json")
 os.system("git add *")
 os.system("git commit -m 'delete-old-birthday'")
 # Function to load existing JSON data from the file
