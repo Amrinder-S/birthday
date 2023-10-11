@@ -55,6 +55,7 @@ def main():
                 add_entry(data, name, crn, gender)
 
     save_json_data(filename, data)
+    os.system(f"echo . >> {datetime.now().date()}")
     os.system("git add *")
     os.system("git commit -m 'birthday-update'")
 if __name__ == "__main__":
