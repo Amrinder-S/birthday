@@ -55,12 +55,34 @@
         .then(data => {
             const cardDiv = document.querySelector('.bdy-card');
             data.forEach(person => {
-                const genderClass = person.gender === 'm' ? 'bdy-boy' : 'bdy-girl';
-                const pElement = document.createElement('p');
-                pElement.className = genderClass;
-                pElement.textContent = `${person.name} | CRN: ${person.CRN}`;
-                cardDiv.appendChild(pElement);
-            });
+    const genderClass = person.gender === 'm' ? 'bdy-boy' : 'bdy-girl';
+
+    // Create the person card div with slightly curved edges and white background with transparency
+    const personCardDiv = document.createElement('div');
+    personCardDiv.className = 'person-card';
+    personCardDiv.style.borderRadius = '10px';
+    personCardDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+    personCardDiv.style.marginBottom = '10px';  // Add margin for spacing between cards
+    
+    const pNameElement = document.createElement('p');
+    pNameElement.classList.add(genderClass);
+    pNameElement.style.textAlign = 'center';  // Center the text
+    pNameElement.textContent = person.name;
+    personCardDiv.appendChild(pNameElement);
+
+    const pCRNElement = document.createElement('p');
+    pCRNElement.style.textAlign = 'center';
+    pCRNElement.classList.add(genderClass);
+    pCRNElement.textContent = `CRN: ${person.CRN}`;
+    personCardDiv.appendChild(pCRNElement);
+
+    // Add the gender class to the person card div
+    // personCardDiv.classList.add(genderClass);
+
+    // Append the person card div to the document body
+    cardDiv.appendChild(personCardDiv);
+});
+
         })
         .catch(error => console.error(error));
 </script>
