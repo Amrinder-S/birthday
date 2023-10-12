@@ -1,6 +1,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Young+Serif">
         <style>
-          .results-summary-container {
+          .birthday-card-container {
             font-family: "Hanken Grotesk", sans-serif;
             display: flex;
             width: 400px;
@@ -50,7 +50,7 @@
             margin-bottom: 10px;
           }
     
-          .results-summary-container__result {
+          .birthday-card-container__result {
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -314,7 +314,7 @@
             }
           }
         </style>
-        <div class="results-summary-container">
+        <div class="birthday-card-container" id="birthday-card-container">
           <div class="confetti">
             <div class="confetti-piece"></div>
             <div class="confetti-piece"></div>
@@ -336,7 +336,7 @@
             <div class="confetti-piece"></div>
             <div class="confetti-piece"></div>
           </div>
-          <div class="results-summary-container__result">
+          <div class="birthday-card-container__result">
             <div class="result-box">
               <div class="imgage"><img class="hbd-img" src="https://appsc.gndec.ac.in/sites/default/files/hb.png" alt="Happy Birthday" /></div>
             </div>
@@ -346,12 +346,23 @@
           </div>
         </div>
     <script>
+      function hideDivById(divId) {
+  var div = document.getElementById(divId);
+  if (div) {
+    div.style.display = "none";
+  } else {
+    console.error("No div found with id: " + divId);
+  }
+}
       fetch(
         "https://raw.githubusercontent.com/Amrinder-S/birthday/master/data.json"
       )
         .then((response) => response.json())
         .then((data) => {
           const cardDiv = document.querySelector(".bdy-card");
+          if (data.length === 0) {
+          hideDivById('birthday-card-container');
+        } else {
           data.forEach((person) => {
             const genderClass = person.gender === "m" ? "bdy-boy" : "bdy-girl";
     
@@ -376,7 +387,8 @@
             // Append the person card div to the document body
             cardDiv.appendChild(personCardDiv);
           });
+        }
         })
-        .catch((error) => console.error(error));
+        .catch((error) => hideDivById('birthday-card-container'));
     </script>
     
