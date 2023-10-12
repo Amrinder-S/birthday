@@ -1,12 +1,7 @@
 [
     {
-        "name": "Maninderjeet Singh",
+        "name": "Randhir Singh",
         "CRN": "123456789",
         "gender": "m"
-    },
-    {
-        "name": "Brahmjot Kaur",
-        "CRN": "987654321",
-        "gender": "f"
     }
 ]
