@@ -1,61 +1,4 @@
-<!-- <style>
-		/*267 x 410*/
-        .bdy-text{
-            
-            padding: 20px;
-            max-width: 267px;
-            margin: 10px auto;
-            background-color: rgb(244, 231, 157);
-            backdrop-filter: blur(15px);
-            border-radius: inherit;
-            
-        }
-        .bdy-img{
-            max-width: 250px;
-            padding: auto;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s;
-            transform: scale(2.1);
-        }
-        .bdy-img:hover{
-            transform: scale(2.2);
-        }
-
-        .bdy-card {
-            border: 1px solid #ccc;
-            padding: 20px;
-            width: 267px;
-			min-height: 410px;
-            margin: 0 auto;
-            background-color: #fff9b4;
-            border-radius: 8px;
-            
-        }
-		.bdy-boy {
-		font-weight:bold;
-		color:#0004f7;
-		background-image:url('https://i.imgur.com/guLoCJ8.gif')
-		}
-		.bdy-girl {
-		font-weight:bold;
-		color:#f700f3;
-		background-image:url('https://i.imgur.com/guLoCJ8.gif')
-		}
-    </style>
-    <div class="bdy-card">
-        <div class="bdy-text">
-            <img class="bdy-img" src="https://i.imgur.com/jPuuYzY.png" alt="Happy Birthday">
-        </div>
-    </div> -->
-
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Young+Serif">
         <style>
           .results-summary-container {
             font-family: "Hanken Grotesk", sans-serif;
@@ -82,18 +25,11 @@
             width: 250px;
             min-height: 20px;
             margin: 0 auto;
-            font-family: "custom-font";
+            font-family: 'Young Serif', serif;
             font-style: inherit;
             font-size: larger;
             -webkit-text-fill-color: #2e2e2e;
           }
-          @font-face {
-            font-family: "custom-font";
-            src: url(./custom-font.ttf) format("truetype");
-            font-size: larger;
-            font-weight: bolder;
-          }
-    
           .heading-tertiary {
             font-size: 20px;
             font-weight: 500;
@@ -133,7 +69,7 @@
             font-weight: 400;
             color: hsl(241, 100%, 89%);
           }
-          img {
+          .hbd-img {
             max-width: 250px;
             padding: auto;
             align-items: center;
@@ -141,7 +77,7 @@
             transition: transform 0.3s;
             transform: scale(2.1);
           }
-          img:hover {
+          .hbd-img:hover {
             transform: scale(2.2);
           }
     
@@ -378,8 +314,6 @@
             }
           }
         </style>
-      </head>
-      <body>
         <div class="results-summary-container">
           <div class="confetti">
             <div class="confetti-piece"></div>
@@ -404,16 +338,13 @@
           </div>
           <div class="results-summary-container__result">
             <div class="result-box">
-              <div class="imgage"><img src="hb.png" alt="Happy Birthday" /></div>
+              <div class="imgage"><img class="hbd-img" src="https://appsc.gndec.ac.in/sites/default/files/hb.png" alt="Happy Birthday" /></div>
             </div>
             <br />
             <hr width="90%" size="2px" color="#ffea00" />
             <div class="bdy-card"></div>
           </div>
         </div>
-      </body>
-    </html>
-    
     <script>
       fetch(
         "https://raw.githubusercontent.com/Amrinder-S/birthday/master/data.json"
