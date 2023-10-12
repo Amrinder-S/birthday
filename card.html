@@ -59,10 +59,22 @@
             justify-content: center;
             padding: 20px;
             border-radius: 30px;
-            background-image: linear-gradient(to bottom, #734b6d, #42275a);
-            animation: gradient 9s infinite alternate linear;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #06ec9f, #f318b1);
+            background-size: 300% 300%;
+            animation: gradient 5s ease infinite;
           }
-    
+          
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
           .result {
             margin-top: -8px;
             font-size: 16px;
@@ -102,22 +114,6 @@
             background-image: linear-gradient(to left, #aa076b, #61045f);
           }
     
-          @keyframes gradient {
-            0% {
-              background-position: 0% 50%;
-              background-image: linear-gradient(-45deg, #ef629f, #f4d444);
-            }
-    
-            50% {
-              background-position: 100% 50%;
-              background-image: linear-gradient(to bottom, #f98824, #fad119);
-            }
-    
-            100% {
-              background-position: 0% 50%;
-              background-image: linear-gradient(to top, #fdc500, #f9dc5c);
-            }
-          }
     
           .confetti {
             display: flex;
@@ -338,7 +334,7 @@
           </div>
           <div class="birthday-card-container__result">
             <div class="result-box">
-              <div class="imgage"><img class="hbd-img" src="https://appsc.gndec.ac.in/sites/default/files/hb.png" alt="Happy Birthday" /></div>
+              <img class="hbd-img" src="https://appsc.gndec.ac.in/sites/default/files/hb.png" alt="Happy Birthday" />
             </div>
             <br />
             <hr width="90%" size="2px" color="#ffea00" />
@@ -390,5 +386,6 @@
         }
         })
         .catch((error) => hideDivById('birthday-card-container'));
+        
     </script>
     
