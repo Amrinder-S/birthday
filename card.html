@@ -1,9 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Young+Serif">
         <style>
           .birthday-card-container {
             font-family: "Hanken Grotesk", sans-serif;
             display: flex;
-            width: 400px;
+            width: 300px;
             border-radius: 30px;
             box-shadow: 10px 20px 20px rgba(120, 87, 255, 0.3);
             backface-visibility: hidden;
@@ -82,7 +87,7 @@
             color: hsl(241, 100%, 89%);
           }
           .hbd-img {
-            max-width: 250px;
+            max-width: 200px;
             padding: auto;
             align-items: center;
             justify-content: center;
@@ -310,71 +315,76 @@
             }
           }
         </style>
-        <div class="birthday-card-container" id="birthday-card-container">
-          <div class="confetti">
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-            <div class="confetti-piece"></div>
-          </div>
-          <div class="birthday-card-container__result">
-            <div class="result-box">
-              <div class="imgage"><img class="hbd-img" src="./sites/default/files/hb.png" alt="Happy Birthday" /></div>
-            </div>
-            <br />
-            <hr width="90%" size="2px" color="#ffea00" />
-            <div class="bdy-card"></div>
-          </div>
-        </div>
-    <script>
-      function hideDivById(divId) {
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="birthday-card-container" id="birthday-card-container">
+    <div class="confetti">
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+      <div class="confetti-piece"></div>
+    </div>
+    <div class="birthday-card-container__result">
+      <div class="result-box">
+        <div class="imgage"><img class="hbd-img" src="https://appsc.gndec.ac.in/sites/default/files/hb.png" alt="Happy Birthday" /></div>
+      </div>
+      <br />
+      <hr width="90%" size="2px" color="#ffea00" />
+      <div class="bdy-card"></div>
+    </div>
+  </div>
+  <script>
+  function hideDivById(divId) {
   var div = document.getElementById(divId);
   if (div) {
-    div.style.display = "none";
+  div.style.display = "none";
   } else {
-    console.error("No div found with id: " + divId);
+  console.error("No div found with id: " + divId);
   }
-}
-      fetch(
-        "https://raw.githubusercontent.com/Amrinder-S/birthday/master/data.json"
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          const cardDiv = document.querySelector(".bdy-card");
-          if (data.length === 0) {
-          hideDivById('birthday-card-container');
-        } else {
-          data.forEach((person) => {
-            const personCardDiv = document.createElement("div");    
-            const pNameElement = document.createElement("p");
-            pNameElement.style.textAlign = "center"; // Center the text
-            pNameElement.textContent = person.name;
-            personCardDiv.appendChild(pNameElement);
-            const pCRNElement = document.createElement("p");
-            pCRNElement.style.textAlign = "center";
-            pCRNElement.textContent = `CRN: ${person.CRN}`;
-            personCardDiv.appendChild(pCRNElement);
-            // Append the person card div to the document body
-            cardDiv.appendChild(personCardDiv);
-          });
-        }
-        })
-        .catch((error) => hideDivById('birthday-card-container'));
-        
-    </script>
-    
+  }
+  fetch(
+  "https://raw.githubusercontent.com/Amrinder-S/birthday/master/data.json"
+  )
+  .then((response) => response.json())
+  .then((data) => {
+    const cardDiv = document.querySelector(".bdy-card");
+    if (data.length === 0) {
+    hideDivById('birthday-card-container');
+  } else {
+    data.forEach((person) => {
+      const personCardDiv = document.createElement("div");    
+      const pNameElement = document.createElement("p");
+      pNameElement.style.textAlign = "center"; // Center the text
+      pNameElement.textContent = person.name;
+      personCardDiv.appendChild(pNameElement);
+      const pCRNElement = document.createElement("p");
+      pCRNElement.style.textAlign = "center";
+      pCRNElement.textContent = `CRN: ${person.CRN}`;
+      personCardDiv.appendChild(pCRNElement);
+      // Append the person card div to the document body
+      cardDiv.appendChild(personCardDiv);
+    });
+  }
+  })
+  .catch((error) => hideDivById('birthday-card-container'));
+  
+  </script>
+</body>
+</html>        
