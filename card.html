@@ -6,14 +6,19 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Young+Serif">
         <style>
           .birthday-card-container {
+            user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
             font-family: "Hanken Grotesk", sans-serif;
             display: flex;
             width: 300px;
             border-radius: 30px;
-            box-shadow: 10px 20px 20px rgba(120, 87, 255, 0.3);
+            box-shadow: 20px 40px 40px rgba(120, 87, 255, 0.3);
             backface-visibility: hidden;
             align-items: center;
             justify-content: center;
+            box-shadow: inset -5px 0px #ecb1d3;
           }
     
           .heading-primary,
@@ -67,6 +72,10 @@
             background: linear-gradient(-45deg, #ee765281, #ee4eab70, #21b7ee73, #23d5ab65);
             background-size: 400% 400%;
             animation: gradient 5s ease infinite;
+              user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
           }
           
 @keyframes gradient {
@@ -87,6 +96,10 @@
             color: hsl(241, 100%, 89%);
           }
           .hbd-img {
+            user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
             max-width: 190px;
             padding: auto;
             align-items: center;
